@@ -18,6 +18,7 @@ filetype indent on
 filetype plugin indent on
 " Always show file path at bottom of screen
 set laststatus=2
+set hlsearch
 
 " KEY-BINDINGS 
 " Be able to move the line under the cursor up or down with alt+j or alt+k
