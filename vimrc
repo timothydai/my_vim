@@ -1,43 +1,47 @@
+" SETTINGS
+" Set theme to dark
 set background=dark
+" Make mouse be able to click
 set mouse=a
-
+" Make backspace properly delete things in vim 9.0
 set backspace=indent,eol,start
-
-set number relativenumber
-set nu rnu
-
+" Use relative numbers 
+set nu
+" Cursor displays absolute number
+set rnu
+" Set tab widths
 set tabstop=4
 set shiftwidth=4
-
+set expandtab  " Use spaces as tabs
+" Turn on automatic indenting
 filetype indent on
-set laststatus=2
 filetype plugin indent on
+" Always show file path at bottom of screen
+set laststatus=2
 
-set expandtab
-call plug#begin()
-  Plug 'preservim/nerdtree'
-  Plug 'morhetz/gruvbox'
-  Plug 'vim-scripts/AutoComplPop'
-  Plug 'sainnhe/everforest'
-call plug#end()
-colorscheme gruvbox
-
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-
-let NERDTreeShowLineNumbers=1
-autocmd FileType nerdtree setlocal relativenumber
-
+" KEY-BINDINGS 
 " Be able to move the line under the cursor up or down with alt+j or alt+k
 nnoremap ∆ :m .+1<CR>==
 nnoremap ˚ :m .-2<CR>==
 inoremap ∆ <Esc>:m .+1<CR>==gi
 inoremap ˚ <Esc>:m .-2<CR>==gi
 
-" Change alt+h and alt+l to move by word
-nnoremap ˙ b
-nnoremap ¬ w
-inoremap ˙ <Esc>bi
-inoremap ¬ <Esc>wwi
+" PLUGINS 
+" vim-plug installs
+call plug#begin()
+  Plug 'preservim/nerdtree'
+  Plug 'morhetz/gruvbox'
+  Plug 'vim-scripts/AutoComplPop'
+  Plug 'sainnhe/everforest'
+call plug#end()
+" Turn on color theme (must be after vim-plug installs)
+colorscheme gruvbox
+" Set NERDTree keybindings and settings
+"   Find the current file in NERDTree
+nnoremap <C-f> :NERDTreeFind<CR>
+"   Toggle NERDTree
+nnoremap <C-t> :NERDTreeToggle<CR>
+"   Show relative line numbers in NERDTree
+let NERDTreeShowLineNumbers=1
+autocmd FileType nerdtree setlocal relativenumber
+
