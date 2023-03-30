@@ -25,6 +25,17 @@ nnoremap ∆ :m .+1<CR>==
 nnoremap ˚ :m .-2<CR>==
 inoremap ∆ <Esc>:m .+1<CR>==gi
 inoremap ˚ <Esc>:m .-2<CR>==gi
+" Be able to copy current line and paste above or below with alt+shift+j or
+" alt+shift+k
+nnoremap Ô :t .+0<CR>
+nnoremap  :t .-1<CR>
+inoremap Ô <Esc>:t .-1<CR>gi
+inoremap  <Esc>:t .+0<CR>gi
+" Be able to move left or right one word with alt+h or alt+l
+nnoremap ¬ e
+nnoremap ˙ b
+inoremap ¬ <Esc>lea
+inoremap ˙ <Esc>bi
 
 " PLUGINS 
 " vim-plug installs
