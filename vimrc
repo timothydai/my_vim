@@ -45,6 +45,7 @@ call plug#begin()
   Plug 'morhetz/gruvbox'
   Plug 'vim-scripts/AutoComplPop'
   Plug 'sainnhe/everforest'
+  Plug 'easymotion/vim-easymotion'
 call plug#end()
 " Turn on color theme (must be after vim-plug installs)
 colorscheme gruvbox
@@ -56,4 +57,5 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 "   Show relative line numbers in NERDTree
 let NERDTreeShowLineNumbers=1
 autocmd FileType nerdtree setlocal relativenumber
-
+" Set easymotion keybindings
+nmap <Leader>s <Plug>(easymotion-overwin-f)
