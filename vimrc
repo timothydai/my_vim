@@ -46,6 +46,7 @@ call plug#begin()
   Plug 'vim-scripts/AutoComplPop'
   Plug 'sainnhe/everforest'
   Plug 'easymotion/vim-easymotion'
+  Plug 'airblade/vim-gitgutter'
 call plug#end()
 " Turn on color theme (must be after vim-plug installs)
 colorscheme gruvbox
@@ -59,3 +60,5 @@ let NERDTreeShowLineNumbers=1
 autocmd FileType nerdtree setlocal relativenumber
 " Set easymotion keybindings
 nmap <Leader>s <Plug>(easymotion-overwin-f)
+" Update vim-gitgutter time
+set updatetime=250
