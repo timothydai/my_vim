@@ -1,7 +1,9 @@
 " SETTINGS
 " Set theme to dark[/light]
 set background=dark
+" Set fold method indent (good for Python) and default all folds open
 set foldmethod=indent
+set foldlevelstart=99
 " Make mouse be able to click
 set mouse=a
 " Make backspace properly delete things in vim 9.0
