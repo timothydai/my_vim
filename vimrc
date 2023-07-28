@@ -51,6 +51,7 @@ call plug#begin()
   Plug 'easymotion/vim-easymotion'
   Plug 'airblade/vim-gitgutter'
   Plug 'preservim/tagbar'
+  Plug 'tpope/vim-fugitive'
 call plug#end()
 " Turn on color theme (must be after vim-plug installs)
 let g:gruvbox_contrast_dark = 'hard'
