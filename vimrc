@@ -1,6 +1,7 @@
 " SETTINGS
-" Set theme to dark
+" Set theme to dark[/light]
 set background=dark
+set foldmethod=indent
 " Make mouse be able to click
 set mouse=a
 " Make backspace properly delete things in vim 9.0
@@ -49,6 +50,8 @@ call plug#begin()
   Plug 'airblade/vim-gitgutter'
 call plug#end()
 " Turn on color theme (must be after vim-plug installs)
+let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_contrast_light = 'hard'
 colorscheme gruvbox
 " Set NERDTree keybindings and settings
 "   Find the current file in NERDTree
