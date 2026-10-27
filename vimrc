@@ -52,11 +52,23 @@ call plug#begin()
   Plug 'airblade/vim-gitgutter'
   Plug 'preservim/tagbar'
   Plug 'tpope/vim-fugitive'
+  Plug 'junegunn/seoul256.vim'
+  Plug 'romainl/Apprentice'
+  Plug 'APZelos/blamer.nvim'
 call plug#end()
+"
+" Inline git blame on the current line
+let g:blamer_enabled = 1
+let g:blamer_delay = 300
+let g:blamer_show_in_visual_modes = 0
+let g:blamer_template = '<author>, <committer-time> • <summary>'
+let g:blamer_date_format = '%Y-%m-%d'
+
 " Turn on color theme (must be after vim-plug installs)
-let g:gruvbox_contrast_dark = 'hard'
-let g:gruvbox_contrast_light = 'hard'
+let g:gruvbox_contrast_dark = 'soft'
+let g:gruvbox_contrast_light = 'soft'
 colorscheme gruvbox
+" colorscheme apprentice
 " Set NERDTree keybindings and settings
 "   Find the current file in NERDTree
 nnoremap <C-f> :NERDTreeFind<CR>
